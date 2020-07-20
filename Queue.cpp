@@ -33,28 +33,28 @@ public:
 	}
 		
 	int back() const {
-		if (pTail != nullptr) {
+		if (count != 0) {
 			return pTail->item;
 		}
 		 else return -100500;
 	}
 
 	int front() const {
-		if (pFront != nullptr) {
+		if (count != 0) {
 			return pFront->item;
 		}
 		else return -100500;
 	}
 
 	bool Empty() const {
-		if (pFront == nullptr) {
+		if (count == 0) {
 			return true;
 		}
 		return false;
 	}
 
 	void pop() {
-		if (pFront != nullptr) {
+		if (count != 0) {
 			node* temp = pFront;
 			pFront = pFront->next;
 			delete temp;
